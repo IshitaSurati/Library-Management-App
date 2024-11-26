@@ -13,10 +13,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// // Example API Route
-// app.get('/api/books', (req, res) => {
-//     res.status(200).json({ message: "Hello from the backend!" });
-//   });
+// Example API Route
+app.get('/api/books', (req, res) => {
+    res.status(200).json({ message: "Hello from the backend!" });
+  });
 app.use('/api/auth', authRoutes);
 app.use('/api/books', bookRoutes);
 
