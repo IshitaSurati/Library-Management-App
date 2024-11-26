@@ -14,8 +14,8 @@ app.use(cors());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Example API Route
-app.get('/api/books', (req, res) => {
-    res.status(200).json({ message: "Hello from the backend!" });
+app.get('/', (req, res) => {
+    res.send("Welcom To Library Management api....")
   });
 app.use('/api/auth', authRoutes);
 app.use('/api/books', bookRoutes);
